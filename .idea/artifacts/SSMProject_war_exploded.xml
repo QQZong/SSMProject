@@ -28,6 +28,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.5" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.3.6" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.6" />
         </element>
       </element>
     </root>

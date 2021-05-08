@@ -19,9 +19,14 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4 column">
-            <a href="/book/toAddBook" class="btn btn-primary">添加书籍</a>
-        </div>
+        <form action="" method="get">
+            <div class="form-group col-md-10">
+                <input type="text" class="form-control" id="exampleInputBookAuthor" name="author" placeholder="请输入查询内容..." required>
+            </div>
+            <div class="form-group col-md-2">
+                <button type="submit" class="btn btn-success btn-default">点击查询</button>
+            </div>
+        </form>
     </div>
 
     <div class="row clearfix">
@@ -33,6 +38,7 @@
                         <th>作者</th>
                         <th>书名</th>
                         <th>详情</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +48,13 @@
                             <td>${book.author}</td>
                             <td>${book.bookname}</td>
                             <td>${book.detail}</td>
+                            <td>
+                                <a href="${pageContext.request.contextPath}/book/deleteBook?bookid=${book.bookid}" class="btn btn-danger">删除</a>
+                                &nbsp;|&nbsp;
+                                <a href="<c:url value="/book/toUpdateBook?bookid=${book.bookid}"/>" class="btn btn-info">修改</a>
+                                &nbsp;|&nbsp;
+                                <a href="<c:url value="/book/toAddBook"/>" class="btn btn-info">添加书籍</a>
+                            </td>
                         </tr>
                     </c:forEach>
                 </tbody>

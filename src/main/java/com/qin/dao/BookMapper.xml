@@ -8,7 +8,7 @@
         insert into book (author, bookname, detail) VALUES (#{author}, #{bookname}, #{detail})
     </insert>
     <!--删除-->
-    <delete id="deleteBook" parameterType="int">
+    <delete id="deleteBook" parameterType="Integer">
         delete from book where bookid = #{bookid}
     </delete>
     <!--修改-->
@@ -20,7 +20,7 @@
         select * from book
     </select>
     <!--根据ID查询-->
-    <select id="queryBookByID" parameterType="int" resultType="book">
+    <select id="queryBookByID" resultType="book">
         select * from book where bookid = #{bookid}
     </select>
 </mapper>
