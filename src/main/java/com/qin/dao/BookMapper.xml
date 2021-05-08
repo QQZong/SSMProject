@@ -23,4 +23,8 @@
     <select id="queryBookByID" resultType="book">
         select * from book where bookid = #{bookid}
     </select>
+    <!--根据书名查询书本-->
+    <select id="queryByBookName" resultType="book">
+        select * from book where bookname = #{bookName}
+    </select>
 </mapper>

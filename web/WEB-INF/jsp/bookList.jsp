@@ -12,19 +12,20 @@
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    <small>书籍列表 --------- 显示所有书籍</small>
+                    <small>书籍列表 --------- 显示所有书籍</small>&nbsp;&nbsp;&nbsp;<small style="color: red;font-size: small">${msg}</small>
                 </h1>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <form action="" method="get">
-            <div class="form-group col-md-10">
-                <input type="text" class="form-control" id="exampleInputBookAuthor" name="author" placeholder="请输入查询内容..." required>
+        <form action="${pageContext.request.contextPath}/book/queryBooks" method="post">
+            <div class="form-group col-md-9">
+                <input type="text" class="form-control" id="exampleInputBookAuthor" name="bookName" placeholder="请输入查询内容..." required>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <button type="submit" class="btn btn-success btn-default">点击查询</button>
+                <a href="${pageContext.request.contextPath}/book/queryBook" class="btn btn-primary">显示所有数据</a>
             </div>
         </form>
     </div>
