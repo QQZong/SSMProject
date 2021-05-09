@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -69,15 +70,12 @@ public class BookController {
 
     @RequestMapping("/queryBooks")
     public String queryBook(String bookName,Model model){
-        Book book = service.queryByBookName(bookName);
-        System.out.println(book);
-        List<Book> list = new ArrayList<>();
-        list.add(book);
-        if (book==null){
-            list = service.queryBook();
+        List<Book> books = service.queryByBookName(bookName);
+        if (books==null){
+            books = service.queryBook();
             model.addAttribute("msg","未查到数据。");
         }
-        model.addAttribute("bookList",list);
+        model.addAttribute("bookList",books);
         return "bookList";
     }
 }

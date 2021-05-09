@@ -23,7 +23,6 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public int deleteBook(int id) {
-        System.out.println("书本ID："+id);
         return bookMapper.deleteBook(id);
     }
 
@@ -43,7 +42,7 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public Book queryByBookName(String bookName) {
+    public List<Book> queryByBookName(String bookName) {
         return bookMapper.queryByBookName(bookName);
     }
 }

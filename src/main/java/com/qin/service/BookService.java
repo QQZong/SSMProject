@@ -17,5 +17,5 @@ public interface BookService {
     /*根据ID查询*/
     Book queryBookByID(int id);
     /*根据书名查询书本*/
-    Book queryByBookName(@Param("bookName") String bookName);
+    List<Book> queryByBookName(@Param("bookName") String bookName);
 }

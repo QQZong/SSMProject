@@ -52,9 +52,9 @@
                             <td>
                                 <a href="${pageContext.request.contextPath}/book/deleteBook?bookid=${book.bookid}" class="btn btn-danger">删除</a>
                                 &nbsp;|&nbsp;
-                                <a href="<c:url value="/book/toUpdateBook?bookid=${book.bookid}"/>" class="btn btn-info">修改</a>
+                                <a href="${pageContext.request.contextPath}/book/toUpdateBook?bookid=${book.bookid}" class="btn btn-info">修改</a>
                                 &nbsp;|&nbsp;
-                                <a href="<c:url value="/book/toAddBook"/>" class="btn btn-info">添加书籍</a>
+                                <a href="${pageContext.request.contextPath}/book/toAddBook" class="btn btn-info">添加书籍</a>
                             </td>
                         </tr>
                     </c:forEach>
